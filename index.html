@@ -1,65 +1,91 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-
+<!doctype html>
+<html lang="en">
 <head>
   <meta charset="utf-8">
-  <title> Ali's site </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Ali Saki's curriculum vitae">
+  <title>Ali Saki - CV</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: #111827;
+      color: #f9fafb;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: 0.85rem 1.25rem;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 1.15rem;
+      font-weight: 650;
+    }
+
+    a {
+      display: inline-block;
+      padding: 0.6rem 0.9rem;
+      border-radius: 0.5rem;
+      background: #f9fafb;
+      color: #111827;
+      font-weight: 650;
+      text-decoration: none;
+    }
+
+    a:hover { background: #e5e7eb; }
+
+    main {
+      height: calc(100vh - 4.4rem);
+      padding: 0 1rem 1rem;
+    }
+
+    object {
+      width: 100%;
+      height: 100%;
+      border: 0;
+      border-radius: 0.6rem;
+      background: #fff;
+    }
+
+    .fallback {
+      max-width: 40rem;
+      margin: 4rem auto;
+      padding: 2rem;
+      text-align: center;
+      color: #111827;
+    }
+
+    @media (max-width: 600px) {
+      header { align-items: flex-start; }
+      main { padding: 0; }
+      object { border-radius: 0; }
+    }
+  </style>
 </head>
-
 <body>
-  <table cellspacing="20">
-    <tr>
-      <td> <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcToup9WBWm3wf8QxDCBTealEhnYJrpwEgnLUFtRVEbisyWWqUYoNWgZpJhf94fKru0l-zjSszyHbDFwefFYPO14vhC045_yVnThpu268CoGD4CP5pbosFZmWFY6xEkLOUQ2Folc8DZ5Ya-HcdkCtmHlqoIX5kYZrBh9C5VJhZPFBnUbOA5_60rSLuJ1uMkHU3nGjd_92B6Lv7HGKQaYmeh-NtWUKPeC6eBoNqobdFHNoWWgx-tqNcgLxy5g02NNenxfMFkLgDrRJwYk-FyFtniEXgVUxU_bIcsjl2YKeqROnpAZRabsaf2oiGaz_-10OWeS-qd08TIGYPCkSkA6WV0ZYeUbtNnS5L4z6vn7dyUxLu2KbzTCRkn3fmyJBf7eGGTTSPbZKR8Aq6Q23mO_gzKDzFbrpIA89BlXXuP5Rl5_j00AoBWY9zhYyI8&usqp=CAU"
-          alt="picture"> </td>
-      <td>
-        <h1><em>Ali Saki</em>
-          <p><em>Student in <strong><a href="https://www.helli.ir/">Helli 1</a></strong></em></p>
-          <p> I am studying web dev and i really like it</p>
-        </h1>
-      </td>
-    </tr>
-  </table>
-  <hr>
-  <h3>Lessons in School</h3>
-  <ul>
-    <li>Physics</li>
-    <li>Math</li>
-    <li>Chemistry</li>
-  </ul>
-  <hr>
-  <h3> My Hobbies</h3>
-  <ol>
-    <li> Learning English </li>
-    <ul>
-      <li> BTW I Love It </li>
-    </ul>
-    <li> Learning Web Dev </li>
-    <li> Playing Games </li>
-    <li> Watching Movies </li>
-  </ol>
-  <hr>
-  <h3>Skills</h3>
-  <table>
-    <tr>
-      <td>Speacking English </td>
-      <td>⭐⭐⭐⭐⭐</td>
-    </tr>
-    <tr>
-      <td>reading English </td>
-      <td>⭐⭐⭐⭐⭐</td>
-    </tr>
-    <tr>
-      <td>Photography </td>
-      <td>⭐⭐⭐</td>
-    </tr>
-    <tr>
-      <td>Painting </td>
-      <td>⭐</td>
-    </tr>
-  </table>
-  <hr>
-  <a href="contacts.html">Contacts</a>
-  <hr>
+  <header>
+    <h1>Ali Saki - CV</h1>
+    <a href="Ali-Saki-CV.pdf" download>Download PDF</a>
+  </header>
+  <main>
+    <object data="Ali-Saki-CV.pdf" type="application/pdf">
+      <div class="fallback">
+        <p>Your browser cannot display the CV preview.</p>
+        <a href="Ali-Saki-CV.pdf">Open the PDF</a>
+      </div>
+    </object>
+  </main>
 </body>
-
 </html>
