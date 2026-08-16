@@ -1,91 +1,216 @@
 <!doctype html>
-<html lang="en">
+<html lang="de">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Ali Saki's curriculum vitae">
-  <title>Ali Saki - CV</title>
-  <style>
-    :root {
-      color-scheme: light dark;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  <meta name="description" content="Portfolio und Lebenslauf von Ali Saki, Student der Angewandten Informatik in Berlin.">
+  <meta name="theme-color" content="#0d1f1b">
+  <meta property="og:title" content="Ali Saki - Angewandte Informatik">
+  <meta property="og:description" content="Student, Entwickler und neugieriger Problemlöser aus Berlin.">
+  <meta property="og:type" content="website">
+  <title>Ali Saki | Informatik & Entwicklung</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Ali Saki",
+      "jobTitle": "Student der Angewandten Informatik",
+      "email": "mailto:ali.saki2004@gmail.com",
+      "address": {"@type": "PostalAddress", "addressLocality": "Berlin", "addressCountry": "DE"},
+      "url": "https://saki-ali.github.io/cv/",
+      "sameAs": [
+        "https://github.com/Saki-Ali",
+        "https://www.linkedin.com/in/ali-saki-5844b1419/"
+      ]
     }
-
-    * { box-sizing: border-box; }
-
-    body {
-      margin: 0;
-      min-height: 100vh;
-      background: #111827;
-      color: #f9fafb;
-    }
-
-    header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 1rem;
-      padding: 0.85rem 1.25rem;
-    }
-
-    h1 {
-      margin: 0;
-      font-size: 1.15rem;
-      font-weight: 650;
-    }
-
-    a {
-      display: inline-block;
-      padding: 0.6rem 0.9rem;
-      border-radius: 0.5rem;
-      background: #f9fafb;
-      color: #111827;
-      font-weight: 650;
-      text-decoration: none;
-    }
-
-    a:hover { background: #e5e7eb; }
-
-    main {
-      height: calc(100vh - 4.4rem);
-      padding: 0 1rem 1rem;
-    }
-
-    object {
-      width: 100%;
-      height: 100%;
-      border: 0;
-      border-radius: 0.6rem;
-      background: #fff;
-    }
-
-    .fallback {
-      max-width: 40rem;
-      margin: 4rem auto;
-      padding: 2rem;
-      text-align: center;
-      color: #111827;
-    }
-
-    @media (max-width: 600px) {
-      header { align-items: flex-start; }
-      main { padding: 0; }
-      object { border-radius: 0; }
-    }
-  </style>
+  </script>
 </head>
 <body>
-  <header>
-    <h1>Ali Saki - CV</h1>
-    <a href="Ali-Saki-CV.pdf" download>Download PDF</a>
+  <a class="skip-link" href="#main">Zum Inhalt springen</a>
+
+  <header class="site-header" data-header>
+    <a class="brand" href="#top" aria-label="Zur Startseite">AS<span>.</span></a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-menu-toggle>
+      <span></span><span></span><span></span>
+      <span class="sr-only" data-menu-label>Menü öffnen</span>
+    </button>
+    <nav id="site-nav" class="site-nav" aria-label="Hauptnavigation" data-nav>
+      <a href="#profil">Profil</a>
+      <a href="#projekte">Projekte</a>
+      <a href="#werdegang">Werdegang</a>
+      <a href="#kenntnisse">Kenntnisse</a>
+      <a class="nav-cta" href="#kontakt">Kontakt</a>
+    </nav>
   </header>
-  <main>
-    <object data="Ali-Saki-CV.pdf" type="application/pdf">
-      <div class="fallback">
-        <p>Your browser cannot display the CV preview.</p>
-        <a href="Ali-Saki-CV.pdf">Open the PDF</a>
+
+  <main id="main">
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="hero-glow" aria-hidden="true"></div>
+      <div class="hero-copy reveal">
+        <p class="eyebrow"><span></span> Offen für Werkstudentenstellen & Praktika</p>
+        <h1 id="hero-title">Ich verbinde <em>Neugier</em> mit sauberem Code.</h1>
+        <p class="hero-intro">Hallo, ich bin <strong>Ali Saki</strong> — Student der Angewandten Informatik in Berlin. Ich entwickle Webanwendungen, lerne schnell und löse Probleme strukturiert.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#projekte">Projekte ansehen <span aria-hidden="true">↘</span></a>
+          <a class="button button-ghost" href="Ali-Saki-CV.pdf" download>Lebenslauf herunterladen</a>
+        </div>
+        <dl class="quick-facts" aria-label="Kurzinfo">
+          <div><dt>Standort</dt><dd>Berlin</dd></div>
+          <div><dt>Studium</dt><dd>HTW Berlin</dd></div>
+          <div><dt>Fokus</dt><dd>Software & Web</dd></div>
+        </dl>
       </div>
-    </object>
+      <div class="hero-visual reveal" data-delay="1">
+        <div class="portrait-wrap">
+          <div class="portrait-number" aria-hidden="true">01</div>
+          <img src="assets/profile.jpeg" width="1254" height="1254" alt="Porträt von Ali Saki">
+          <div class="status-card"><span></span> Berlin, Deutschland</div>
+        </div>
+      </div>
+      <a class="scroll-cue" href="#profil" aria-label="Weiter zum Profil"><span></span> Scroll</a>
+    </section>
+
+    <section class="section profile" id="profil" aria-labelledby="profile-title">
+      <div class="section-label reveal"><span>01</span> Profil</div>
+      <div class="profile-grid">
+        <h2 id="profile-title" class="section-title reveal">Technik verstehen.<br><em>Ideen umsetzen.</em></h2>
+        <div class="profile-copy reveal" data-delay="1">
+          <p class="lead">Mein Studium und eigene Projekte geben mir eine solide Basis in Python, Java, SQL und Frontend-Entwicklung.</p>
+          <p>Diese Kenntnisse vertiefe ich kontinuierlich durch praktische Anwendungen. Ich bringe hohe Lernbereitschaft, Zuverlässigkeit und eine lösungsorientierte Arbeitsweise mit — und suche ein Umfeld, in dem ich mitdenken, mitbauen und wachsen kann.</p>
+          <div class="target-role">
+            <span>Gesuchte Position</span>
+            <p>Werkstudententätigkeit, Praktikum oder studentische Hilfskraft in Softwareentwicklung, IT oder Datenverarbeitung.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section projects" id="projekte" aria-labelledby="projects-title">
+      <div class="section-heading reveal">
+        <div class="section-label"><span>02</span> Ausgewählte Projekte</div>
+        <h2 id="projects-title" class="section-title">Lernen durch <em>Machen.</em></h2>
+      </div>
+      <div class="project-list">
+        <article class="project-card reveal">
+          <div class="project-index">01</div>
+          <div class="project-content">
+            <div class="project-topline"><span>Full-Stack Webanwendung</span><span>2026</span></div>
+            <h3>Arbeitsplatzbuchung</h3>
+            <p>Proof of Concept zum Anzeigen, Buchen und Stornieren von Arbeitsplätzen — mit API, Datenbank und moderner Benutzeroberfläche.</p>
+            <ul class="tags" aria-label="Technologien"><li>Python</li><li>FastAPI</li><li>SQLite</li><li>React</li><li>TypeScript</li><li>Tailwind CSS</li></ul>
+          </div>
+          <a class="project-link" href="https://github.com/Saki-Ali/Arbeitsplatzbuchung" target="_blank" rel="noreferrer" aria-label="Arbeitsplatzbuchung auf GitHub öffnen">↗</a>
+        </article>
+
+        <article class="project-card reveal">
+          <div class="project-index">02</div>
+          <div class="project-content">
+            <div class="project-topline"><span>Hochschulprojekt</span><span>2025</span></div>
+            <h3>Java Taschenrechner</h3>
+            <p>Programmierübung mit Unit-Tests und systematischer Fehlerkorrektur für eine Taschenrechner-Anwendung.</p>
+            <ul class="tags" aria-label="Technologien"><li>Java</li><li>Gradle</li><li>Unit Tests</li><li>Debugging</li></ul>
+          </div>
+          <a class="project-link" href="https://github.com/Saki-Ali/ha3" target="_blank" rel="noreferrer" aria-label="Java-Hochschulprojekt auf GitHub öffnen">↗</a>
+        </article>
+
+        <article class="project-card reveal">
+          <div class="project-index">03</div>
+          <div class="project-content">
+            <div class="project-topline"><span>Persönliches Projekt</span><span>Aktuell</span></div>
+            <h3>Diese CV-Webseite</h3>
+            <p>Eine responsive, barrierearme Portfolio-Seite mit semantischem HTML, individuellem Design und progressiven Interaktionen.</p>
+            <ul class="tags" aria-label="Technologien"><li>HTML</li><li>CSS</li><li>JavaScript</li><li>GitHub Pages</li></ul>
+          </div>
+          <a class="project-link" href="https://github.com/Saki-Ali/cv" target="_blank" rel="noreferrer" aria-label="CV-Projekt auf GitHub öffnen">↗</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="section journey" id="werdegang" aria-labelledby="journey-title">
+      <div class="section-heading reveal">
+        <div class="section-label"><span>03</span> Werdegang</div>
+        <h2 id="journey-title" class="section-title">Mein Weg <em>bisher.</em></h2>
+      </div>
+      <div class="journey-grid">
+        <div class="timeline-column reveal">
+          <h3>Ausbildung</h3>
+          <ol class="timeline">
+            <li>
+              <div class="timeline-marker"></div>
+              <p class="timeline-date">April 2025 — heute</p>
+              <h4>HTW Berlin</h4>
+              <p>Hochschule für Technik und Wirtschaft</p>
+              <ul><li>Angewandte Informatik</li><li>Wirtschaftsinformatik</li></ul>
+            </li>
+            <li>
+              <div class="timeline-marker"></div>
+              <p class="timeline-date">März — Dezember 2024</p>
+              <h4>WBS Studienkolleg</h4>
+              <p>Feststellungsprüfung (FSP)</p>
+              <strong>Note 1,7</strong>
+            </li>
+          </ol>
+        </div>
+        <div class="timeline-column reveal" data-delay="1">
+          <h3>Berufserfahrung</h3>
+          <ol class="timeline">
+            <li>
+              <div class="timeline-marker"></div>
+              <p class="timeline-date">Juli — November 2022</p>
+              <h4>Kellner</h4>
+              <p>Noor Restaurant</p>
+            </li>
+            <li>
+              <div class="timeline-marker"></div>
+              <p class="timeline-date">Februar — Juni 2022</p>
+              <h4>Kassierer</h4>
+              <p>Cafe Khosh</p>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <section class="section skills" id="kenntnisse" aria-labelledby="skills-title">
+      <div class="section-heading reveal">
+        <div class="section-label"><span>04</span> Kenntnisse</div>
+        <h2 id="skills-title" class="section-title">Werkzeuge, die ich <em>einsetze.</em></h2>
+      </div>
+      <div class="skills-grid">
+        <article class="skill-group reveal"><span class="skill-icon">&lt;/&gt;</span><h3>Programmierung</h3><p>Python · Java</p></article>
+        <article class="skill-group reveal" data-delay="1"><span class="skill-icon">▦</span><h3>Frontend</h3><p>HTML · CSS · JavaScript · React · TypeScript</p></article>
+        <article class="skill-group reveal" data-delay="2"><span class="skill-icon">⌘</span><h3>Daten & Tools</h3><p>SQL · Git · IntelliJ · Visual Studio Code</p></article>
+        <article class="skill-group reveal"><span class="skill-icon">A</span><h3>Sprachen</h3><dl class="language-list"><div><dt>Deutsch</dt><dd>Fließend</dd></div><div><dt>Englisch</dt><dd>Fließend</dd></div><div><dt>Persisch</dt><dd>Muttersprache</dd></div></dl></article>
+      </div>
+    </section>
+
+    <section class="contact" id="kontakt" aria-labelledby="contact-title">
+      <div class="contact-inner reveal">
+        <p class="eyebrow"><span></span> Bereit für den nächsten Schritt</p>
+        <h2 id="contact-title">Lassen Sie uns <em>sprechen.</em></h2>
+        <p>Sie suchen einen motivierten Studenten, der Verantwortung übernimmt und Neues schnell lernt? Ich freue mich auf Ihre Nachricht.</p>
+        <div class="contact-actions">
+          <a class="button button-light" href="mailto:ali.saki2004@gmail.com">E-Mail schreiben <span aria-hidden="true">↗</span></a>
+          <button class="copy-button" type="button" data-copy-email data-email="ali.saki2004@gmail.com">E-Mail kopieren</button>
+        </div>
+      </div>
+      <div class="contact-links">
+        <a href="https://github.com/Saki-Ali" target="_blank" rel="noreferrer">GitHub ↗</a>
+        <a href="https://www.linkedin.com/in/ali-saki-5844b1419/" target="_blank" rel="noreferrer">LinkedIn ↗</a>
+        <a href="tel:+4917611670481">+49 176 1167 0481</a>
+      </div>
+    </section>
   </main>
+
+  <footer class="site-footer">
+    <p>© <span data-year></span> Ali Saki</p>
+    <p>Entwickelt mit HTML, CSS & JavaScript.</p>
+    <a href="#top">Nach oben ↑</a>
+  </footer>
+
+  <div class="toast" role="status" aria-live="polite" data-toast>E-Mail-Adresse kopiert.</div>
 </body>
 </html>
