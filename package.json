@@ -1,0 +1,18 @@
+{
+  "name": "ali-saki-cv",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Quality checks for Ali Saki's static CV website",
+  "scripts": {
+    "check": "npm run check:files && npm run check:html && npm run check:css && npm run check:js",
+    "check:files": "node scripts/verify-site.mjs",
+    "check:html": "html-validate index.html",
+    "check:css": "csstree-validator styles.css",
+    "check:js": "node --check script.js",
+    "test": "npm run check"
+  },
+  "devDependencies": {
+    "csstree-validator": "4.0.1",
+    "html-validate": "11.7.0"
+  }
+}
